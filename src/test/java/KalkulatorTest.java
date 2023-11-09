@@ -77,5 +77,20 @@ class KalkulatorTest {
 
     }
 
+    @Test
+    void pozwala_dodawac_wlasny_separator() {
+        // Given
+        String dane = "//@\n1@2@3";
+        Integer oczekiwanyWynik = 6;
+        Kalkulator kalkulator = new Kalkulator();
+
+        // When
+        Integer wynik = kalkulator.dodaj(dane);
+
+        // Then
+        assertEquals(oczekiwanyWynik, wynik);
+
+    }
+
 
 }
